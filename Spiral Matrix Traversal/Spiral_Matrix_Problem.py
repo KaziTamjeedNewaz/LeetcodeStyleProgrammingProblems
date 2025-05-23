@@ -2,7 +2,6 @@ print ("Enter number of rows: ")
 m=int(input())
 print ("Enter number of Columns: ")
 n=int(input())
-boundary=[]
 matrix=[[0]*n for i in range(m)]
 matrixVisited=[[False]*n for i in range(m)]
 for row in range(m):
@@ -12,6 +11,14 @@ for row in range(m):
 print("Input Matrix")
 for row in matrix:
     print(row)
+if ((m==1) and (n==1)):
+    result=[matrix[0][0]]
+    print("Spiral traversal of this matrix\n", result)
+    exit  
+elif (m==1):
+    result=matrix[0]
+    print("Spiral traversal of this matrix\n", result)
+    exit
 index=matrix[0][0]
 indexRow=0
 indexColumn=0
